@@ -1,9 +1,16 @@
-class App extends React.Component {
+class Editor extends React.Component{
+  constructor(props){
+    super(props)
+    this.state={
+      name:'Archbold'
+    }
+  }
   render(){
-    return (<div>hello react</div>)
+    return(<textarea id="editor" rows="4" cols="50"></textarea>)
   }
 }
 
-ReactDOM.render(<div>hello world</div>,document.querySelector('#root'))
-
-console.log('everything bho zvekuti')
+const Preview=(props)=>{
+  return(<div id="preview"></div>)
+}
+ReactDOM.render(<Editor/>,document.querySelector('#root'));
