@@ -1,18 +1,24 @@
 const Preview=(props)=>{
-  return(<div id="preview"></div>)
+  return(<div id="preview">{props.text}</div>)
 }
 
-class Editor extends React.Component{
+class App extends React.Component{
   constructor(props){
     super(props)
     this.state={
-      name:'Archbold'
+      placeHolderText:'place holder text'
     }
   }
   render(){
-    return(<textarea id="editor"></textarea>)
+    return(<div class="row">
+      <div id="editor_root" class="col-6"><Editor text={this.state.placeHolderText}/></div>
+      <div id="preview_root" class="col-6"><Preview text={this.state.placeHolderText}/></div>
+    </div>)
   }
 }
 
-ReactDOM.render(<Editor/>,document.querySelector('#editor_root'));
-ReactDOM.render(<Preview/>,document.querySelector('#preview_root'));
+const Editor=(props)=>{
+  return (<textarea id="editor">{props.text}</textarea>)
+}
+
+ReactDOM.render(<App/>,document.querySelector('#root'));
