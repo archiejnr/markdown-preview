@@ -1,5 +1,35 @@
 #root{
-  background:skyblue;
   width:100vw;
   height:100vh;
+  background:#000;
+}
+#editor_root{
+  background:skyblue;
+  width:80%;
+  height:100vh;
+  text-align:center;
+  padding-top:25px;
+}
+#preview_root{
+  background:skyblue;
+  width:80%;
+  height:100vh;
+  text-align:center;
+  padding-top:25px;
+}
+textarea{
+  background:#ffffb3;
+  font-size: 25px;
+  font-family: monospace;
+  font-weight:600;
+  width:80%;
+  height:90vh;
+  overflow-x: scroll;
+  border-radius:10px;
+}
+#preview{
+  width:80%;
+  height:90vh;
+  background-color:#ffffb3;
+  position:absolute;
 }

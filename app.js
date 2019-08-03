@@ -1,3 +1,7 @@
+const Preview=(props)=>{
+  return(<div id="preview"></div>)
+}
+
 class Editor extends React.Component{
   constructor(props){
     super(props)
@@ -6,11 +10,9 @@ class Editor extends React.Component{
     }
   }
   render(){
-    return(<textarea id="editor" rows="4" cols="50"></textarea>)
+    return(<textarea id="editor"></textarea>)
   }
 }
 
-const Preview=(props)=>{
-  return(<div id="preview"></div>)
-}
-ReactDOM.render(<Editor/>,document.querySelector('#root'));
+ReactDOM.render(<Editor/>,document.querySelector('#editor_root'));
+ReactDOM.render(<Preview/>,document.querySelector('#preview_root'));
