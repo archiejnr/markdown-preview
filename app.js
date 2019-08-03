@@ -16,15 +16,15 @@ class App extends React.Component{
       placeHolderText:e.target.value
     })
   }
-
   render(){
-    return(<div className="row">
-      <div id="editor_root" className="col-6"><Editor text={this.state.placeHolderText} onChange={this.handleChange}/></div>
-      <div id="preview_root" className="col-6"><Preview text={this.state.placeHolderText}/></div>
-    </div>)
+    return(
+      <div className="row">
+        <div id="editor_root" className="col-xl-6"><Editor text={this.state.placeHolderText} onChange={this.handleChange}/></div>
+        <div id="preview_root" className="col-xl-6"><Preview text={this.state.placeHolderText}/></div>
+      </div>
+          )
   }
 }
-
 const Editor=(props)=>{
   return (<textarea id="editor" onChange={props.onChange}>{props.text}</textarea>)
 }
