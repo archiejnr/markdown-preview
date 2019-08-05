@@ -1,5 +1,5 @@
 const Preview=(props)=>{
-  return(<div id="preview">{props.text}</div>)
+  return(<div id="preview" dangerouslySetInnerHTML={{__html: marked(props.text)}}></div>)
 }
 
 class App extends React.Component{
