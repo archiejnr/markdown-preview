@@ -19,8 +19,14 @@ class App extends React.Component{
   render(){
     return(
       <div className="row">
-        <div id="editor_root" className="col-xl-6"><Editor text={this.state.placeHolderText} onChange={this.handleChange}/></div>
-        <div id="preview_root" className="col-xl-6"><Preview text={this.state.placeHolderText}/></div>
+        <div id="editor_root" className="col-xl-6">
+          <div class="text-center fonts">Edit Here</div>
+          <Editor text={this.state.placeHolderText} onChange={this.handleChange}/>
+        </div>
+        <div id="preview_root" className="col-xl-6">
+          <div class="text-center fonts" >Markdown</div>
+          <Preview text={this.state.placeHolderText}/>
+        </div>
       </div>
           )
   }
